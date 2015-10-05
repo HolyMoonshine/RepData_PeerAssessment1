@@ -1,11 +1,10 @@
 ---
 title: "PA1_template.Rmd"
-date: "Sunday, September 20, 2015"
+date: "Monday October 5th, 2015"
 output: html_document
 ---
 # Reproducible Research Project 1
-*This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and Nove
-mber, 2012 and include the number of steps taken in 5 minute intervals each day.*
+*This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.*
 
 ## Data Load and Preprocessing
 
@@ -82,7 +81,7 @@ steps_Median
 
 ```r
 hist(mm_Data$total_steps,
-     xlab = "Total Steps per Day",
+     xlab = "Total Steps / Day",
      main = "Daily Steps",
      col = "green",
      cex.main = 1.0,
@@ -130,7 +129,7 @@ head(ada_Pattern)
 ```r
 plot(ada_Pattern,
      type="l",
-     main = "Average Steps by Interval Time",
+     main = "Average Steps by Interval (Time)",
      xlab = "Time",
      ylab = "Average Steps"
      )
@@ -202,7 +201,7 @@ The updated data, obtained by filling in NA values with the interval average val
 
 ```r
 hist(new_mmData$total_steps,
-     xlab = "Total Steps per Day",
+     xlab = "Total Steps / Day",
      main = "Daily Steps",
      col = "green",
      cex.main = 1.0,
@@ -259,7 +258,7 @@ xyplot(ave_steps~interval | factor(weekend),
        type = "l",
        main = "Weekend vs. Weekday Steps", 
        ylab = "Steps", 
-       xlab = "Interval",
+       xlab = "Interval (Time)",
        layout = c(1,2))
 ```
 
